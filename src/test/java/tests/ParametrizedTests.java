@@ -15,7 +15,7 @@ public class ParametrizedTests {
     @Test
     @Tag("apple_tag")
     void paramitrizedStringTest() {
-        String a = System.getProperty("test"); // from terminal, gradle apple_tests -Dtest=param
+        String a = System.getProperty("test" , "paramtest"); // from terminal, gradle apple_tests -Dtest=paramtest
 
         logger.info("\na = " + a);
         assertEquals("paramtest", a, "b = " + a);
